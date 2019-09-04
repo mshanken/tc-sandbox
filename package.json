@@ -13,6 +13,7 @@
     "@typescript-eslint/parser": "^1.13.0",
     "eslint": "^6.3.0",
     "eslint-config-react-app": "^5.0.1",
+    "eslint-plugin-cypress": "^2.6.1",
     "eslint-plugin-flowtype": "^3.13.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
@@ -23,7 +24,10 @@
     "prettier": "1.18.2"
   },
   "eslintConfig": {
-    "extends": "react-app",
+    "extends": [
+      "react-app",
+      "plugin:cypress/recommended"
+    ],
     "rules": {
       "semi": "error"
     }
@@ -45,5 +49,9 @@
       "eslint --fix",
       "git add"
     ]
+  },
+  "dependencies": {
+    "babel-eslint": "^10.0.2",
+    "cypress": "^3.4.1"
   }
 }
