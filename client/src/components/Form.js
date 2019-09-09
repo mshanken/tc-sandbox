@@ -19,32 +19,32 @@ const AutoCompleteOption = AutoComplete.Option;
 
 const residences = [
   {
-    value: 'zhejiang',
-    label: 'Zhejiang',
+    value: 'canada',
+    label: 'Canada',
     children: [
       {
-        value: 'hangzhou',
-        label: 'Hangzhou',
+        value: 'ontario',
+        label: 'Ontario',
         children: [
           {
-            value: 'xihu',
-            label: 'West Lake'
+            value: 'toronto',
+            label: 'Toronto'
           }
         ]
       }
     ]
   },
   {
-    value: 'jiangsu',
-    label: 'Jiangsu',
+    value: 'usa',
+    label: 'United States',
     children: [
       {
-        value: 'nanjing',
-        label: 'Nanjing',
+        value: 'newyork',
+        label: 'New York',
         children: [
           {
-            value: 'zhonghuamen',
-            label: 'Zhong Hua Men'
+            value: 'nyc',
+            label: 'New York City'
           }
         ]
       }
@@ -233,7 +233,7 @@ class ApplicationForm extends Component {
         </Form.Item>
         <Form.Item label="Habitual Residence">
           {getFieldDecorator('residence', {
-            initialValue: ['zhejiang', 'hangzhou', 'xihu'],
+            initialValue: ['usa', 'newyork', 'nyc'],
             rules: [
               {
                 type: 'array',
