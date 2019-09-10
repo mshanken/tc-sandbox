@@ -10,8 +10,3 @@ jobs:
     steps:
       - checkout
       - run: docker-compose build -f ./docker-compose.prod.yml
-workflows:
-  build:
-    jobs:
-      - build
-    version: 2
