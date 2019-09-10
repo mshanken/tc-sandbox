@@ -128,11 +128,11 @@ class ApplicationForm extends Component {
       }
     };
     const prefixSelector = getFieldDecorator('prefix', {
-      initialValue: '86'
+      initialValue: '1'
     })(
       <Select style={{ width: 70 }}>
-        <Option value="86">+86</Option>
-        <Option value="87">+87</Option>
+        <Option value="1">+1</Option>
+        <Option value="44">+44</Option>
       </Select>
     );
 
@@ -231,14 +231,14 @@ class ApplicationForm extends Component {
             </Select>
           )}
         </Form.Item>
-        <Form.Item label="Habitual Residence">
+        <Form.Item label="Country / State / City">
           {getFieldDecorator('residence', {
             initialValue: ['usa', 'newyork', 'nyc'],
             rules: [
               {
                 type: 'array',
                 required: true,
-                message: 'Please select your habitual residence!'
+                message: 'Please select your residence!'
               }
             ]
           })(<Cascader options={residences} />)}
