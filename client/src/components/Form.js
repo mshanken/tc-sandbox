@@ -107,12 +107,12 @@ class ApplicationForm extends Component {
 
     const formItemLayout = {
       labelCol: {
-        xs: { span: 24 },
-        sm: { span: 8 }
+        sm: { span: 24 },
+        md: { span: 6 }
       },
       wrapperCol: {
-        xs: { span: 24 },
-        sm: { span: 16 }
+        sm: { span: 24 },
+        md: { span: 18 }
       }
     };
     const tailFormItemLayout = {
@@ -141,7 +141,7 @@ class ApplicationForm extends Component {
     ));
 
     return (
-      <Form {...formItemLayout} onSubmit={this.handleSubmit}>
+      <Form {...formItemLayout} labelAlign="left" onSubmit={this.handleSubmit}>
         <Form.Item label="E-mail">
           {getFieldDecorator('email', {
             rules: [
@@ -285,16 +285,6 @@ class ApplicationForm extends Component {
         </Form.Item>
         <Form.Item label="Images">
           <Upload />
-        </Form.Item>
-        <Form.Item {...tailFormItemLayout}>
-          {getFieldDecorator('agreement', {
-            valuePropName: 'checked'
-          })(<Checkbox>I have read the agreement</Checkbox>)}
-        </Form.Item>
-        <Form.Item {...tailFormItemLayout}>
-          <Button type="primary" htmlType="submit">
-            Register
-          </Button>
         </Form.Item>
       </Form>
     );
