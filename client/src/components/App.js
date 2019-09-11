@@ -3,7 +3,7 @@ import '../stylesheets/App.css';
 import { message, Button, Layout, Steps } from 'antd';
 import Form from './Form';
 
-const { Content, Header } = Layout;
+const { Content } = Layout;
 const { Step } = Steps;
 
 const steps = [
