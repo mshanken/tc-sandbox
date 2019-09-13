@@ -8,7 +8,6 @@ import {
   Select,
   Row,
   Col,
-  Checkbox,
   Button,
   AutoComplete
 } from 'antd';
@@ -115,18 +114,7 @@ class ApplicationForm extends Component {
         md: { span: 18 }
       }
     };
-    const tailFormItemLayout = {
-      wrapperCol: {
-        xs: {
-          span: 24,
-          offset: 0
-        },
-        sm: {
-          span: 16,
-          offset: 8
-        }
-      }
-    };
+
     const prefixSelector = getFieldDecorator('prefix', {
       initialValue: '1'
     })(
