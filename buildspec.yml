@@ -4,7 +4,6 @@ phases:
   pre_build:
     commands:
       - echo Logging in to Amazon ECR...
-      - aws -v
       - $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
       - node -v
       - npm -v
