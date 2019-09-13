@@ -16,7 +16,5 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
-      - echo $CODEBUILD_SOURCE_VERSION
-      - echo $CODEBUILD_WEBHOOK_TRIGGER
       - echo Pushing the Docker image...
       - docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG
