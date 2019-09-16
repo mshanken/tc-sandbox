@@ -9,6 +9,8 @@ phases:
       - npm -v
   build:
     commands:
+      - echo Running unit tests
+      - npm test
       - echo Build started on `date`
       - echo Building the Docker image...
       - docker build -f $DOCKERFILE -t $IMAGE_REPO_NAME .
