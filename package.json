@@ -4,7 +4,7 @@
   "description": "",
   "main": "server/src/server.js",
   "scripts": {
-    "test": "cd client && npm test"
+    "test": "cd client && CI=true npm test"
   },
   "author": "",
   "license": "ISC",
